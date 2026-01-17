@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineVault - Discover Movies</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <h1>CineMania</h1>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#categories" class="nav-link">Categories</a></li>
+                    <li><a href="#trending" class="nav-link">Featured</a></li>
+                    <li><a href="#search" class="nav-link">Search</a></li>
+                </ul>
+                <button class="burger" id="burger" aria-label="Menu">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">Discover Your Next Favorite Movie</h2>
+                    <p class="hero-subtitle">Explore thousands of films from classic cinema to modern blockbusters</p>
+                    <button class="btn btn-primary" onclick="document.getElementById('search').scrollIntoView({behavior: 'smooth'})">
+                        <span>Start Exploring</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-overlay"></div>
+        </section>
+
+        <section class="categories-section" id="categories">
+            <div class="container">
+                <h2 class="section-title">Browse by Genre</h2>
+                <div class="categories-grid" id="categoriesGrid">
+                    <button class="category-btn" data-genre="action">Action</button>
+                    <button class="category-btn" data-genre="comedy">Comedy</button>
+                    <button class="category-btn" data-genre="drama">Drama</button>
+                    <button class="category-btn" data-genre="horror">Horror</button>
+                    <button class="category-btn" data-genre="romance">Romance</button>
+                    <button class="category-btn" data-genre="thriller">Thriller</button>
+                    <button class="category-btn" data-genre="sci-fi">Sci-Fi</button>
+                    <button class="category-btn" data-genre="fantasy">Fantasy</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-section" id="search">
+            <div class="container">
+                <h2 class="section-title">Search Movies</h2>
+                <div class="search-box">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Enter movie title...">
+                    <button class="btn btn-search" id="searchBtn">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="trending-section" id="trending">
+            <div class="container">
+                <h2 class="section-title" id="resultsTitle">Featured Movies</h2>
+                <div class="movies-grid" id="moviesGrid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 CineVault. All rights reserved.</p>
+            <p>Powered by OMDb API</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="movieModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
